@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Çetin Tiryaki — CV</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container px-3">
+    <a class="navbar-brand" href="index.html">Home</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">About Me</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="mailto:cetin.tiryaki@std.bogazici.edu.tr">Contact</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" role="button"
+             data-bs-toggle="dropdown" aria-expanded="false">Resume</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="CV.pdf" download="CV.pdf">Download</a></li>
+            <li><a class="dropdown-item" href="resume.html" target="_blank" rel="noopener">Preview</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/cetintiryaki" target="_blank" rel="noopener">GitHub</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.linkedin.com/in/çetin-tiryaki" target="_blank" rel="noopener">LinkedIn</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ================== RESUME ================== -->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+  :root {
+    --ink: #111315;
+    --muted: #585b63;
+    --rule: #D9DCE1;
+    --accent: #0F4C81;
+  }
+
+  @page { size: A4; margin: 14mm; }
+
+  .page, .page * {
+    font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.4;
+    color: var(--ink);
+  }
+
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 10px auto;
+    background: #fff;
+    box-shadow: 0 0 0 1px rgba(0,0,0,.08), 0 10px 30px rgba(0,0,0,.08);
+  }
+  .page-inner { padding: 12mm 14mm; }
+
+  @media print {
+    nav, footer, .footer-gradient { display: none !important; }
+    .page { box-shadow: none; margin: 0; width: auto; min-height: auto; }
+    .page-inner { padding: 0; }
+    .page a { color: inherit; text-decoration: none; }
+  }
+
+  /* ---- Header ---- */
+  .cv-header {
+    text-align: center;
+    border-bottom: 1.5px solid var(--rule);
+    padding-bottom: 6mm;
+    margin-bottom: 5mm;
+  }
+  .cv-name { font-size: 22pt; font-weight: 700; letter-spacing: .2px; margin: 0; }
+  .cv-role { font-size: 10.5pt; color: var(--muted); margin: 2px 0 4px; }
+  .cv-contact { font-size: 9pt; color: var(--muted); }
+  .cv-contact a { color: var(--muted); text-decoration: none; border-bottom: 1px dotted rgba(15,76,129,.35); }
+
+  /* ---- Sections ---- */
+  .cv-section { margin-bottom: 5mm; }
+  .cv-section-title {
+    font-size: 9.5pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .9px;
+    color: var(--accent);
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 2.5mm;
+    margin-bottom: 3.5mm;
+  }
+
+  /* ---- Skills table ---- */
+  .skills-table { width: 100%; border-collapse: collapse; font-size: 9.5pt; }
+  .skills-table td { padding: 1.5mm 0; vertical-align: top; }
+  .skills-table td:first-child { font-weight: 700; white-space: nowrap; width: 42mm; padding-right: 4mm; }
+
+  /* ---- Experience / Education items ---- */
+  .cv-item { margin-bottom: 4mm; }
+  .cv-item-header { display: flex; justify-content: space-between; align-items: baseline; }
+  .cv-item-title { font-size: 10pt; font-weight: 700; margin: 0; }
+  .cv-item-date { font-size: 9pt; color: var(--muted); white-space: nowrap; }
+  .cv-item-sub { display: flex; justify-content: space-between; }
+  .cv-item-org { font-size: 9pt; color: var(--muted); font-style: italic; }
+  .cv-item-loc { font-size: 9pt; color: var(--muted); font-style: italic; }
+  .cv-bullets { margin: 1.5mm 0 0 0; padding-left: 5mm; }
+  .cv-bullets li { font-size: 9.5pt; margin-bottom: 1mm; }
+
+  /* ---- Projects ---- */
+  .cv-project { font-size: 9.5pt; margin-bottom: 2.5mm; }
+  .cv-project strong { color: var(--ink); }
+  .cv-project a { color: var(--accent); text-decoration: none; border-bottom: 1px dotted rgba(15,76,129,.35); font-size: 8.5pt; }
+
+  /* ---- Additional ---- */
+  .cv-add-item { font-size: 9.5pt; margin-bottom: 2mm; }
+  .cv-add-item strong { color: var(--ink); }
+
+  /* ---- Objective ---- */
+  .cv-objective { font-size: 9.5pt; margin-bottom: 5mm; line-height: 1.5; }
+</style>
+
+<main class="page">
+  <div class="page-inner">
+
+    <!-- HEADER -->
+    <header class="cv-header">
+      <h1 class="cv-name">Çetin Tiryaki</h1>
+      <p class="cv-role">Software Engineering Intern Candidate &nbsp;•&nbsp; Computer Engineering, Boğaziçi University</p>
+      <p class="cv-contact">
+        +90 (538) 712 34 76 &nbsp;•&nbsp; İstanbul, Türkiye &nbsp;•&nbsp;
+        <a href="mailto:cetin.tiryaki@std.bogazici.edu.tr">cetin.tiryaki@std.bogazici.edu.tr</a>
+        <br>
+        <a href="https://github.com/cetintiryaki" target="_blank">github.com/cetintiryaki</a>
+        &nbsp;•&nbsp;
+        <a href="https://www.linkedin.com/in/çetin-tiryaki" target="_blank">linkedin.com/in/çetin-tiryaki</a>
+        &nbsp;•&nbsp;
+        <a href="https://cetintiryaki.github.io/myWebSite" target="_blank">cetintiryaki.github.io/myWebSite</a>
+      </p>
+    </header>
+
+    <!-- OBJECTIVE -->
+    <p class="cv-objective">
+      Computer Engineering student at Boğaziçi University seeking a Software Engineering internship in <strong>backend/systems</strong>, <strong>networking</strong>, or <strong>fintech/data</strong>.
+      Contributed to a financial AI platform collecting 30M+ financial sentences via REST APIs. Shipped projects across fraud detection, NLP-to-SQL,
+      reliable networking, and database systems engineering.
+    </p>
+
+    <!-- SKILLS -->
+    <section class="cv-section">
+      <h2 class="cv-section-title">Skills</h2>
+      <table class="skills-table">
+        <tr>
+          <td><strong>Languages</strong></td>
+          <td>C, Java, Python, SQL, x86-64/RISC-V Assembly, Verilog, Prolog, HTML/CSS/JS</td>
+        </tr>
+        <tr>
+          <td><strong>Tools &amp; Areas</strong></td>
+          <td>Git, Linux, Arduino, REST APIs, Selenium;&nbsp; Networking, ML/AI, OS, Parallel Computing, Fintech</td>
+        </tr>
+        <tr>
+          <td><strong>Languages (spoken)</strong></td>
+          <td>Turkish (native), English (proficient)</td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- TECHNICAL EXPERIENCE -->
+    <section class="cv-section">
+      <h2 class="cv-section-title">Technical Experience</h2>
+      <div class="cv-item">
+        <div class="cv-item-header">
+          <p class="cv-item-title">Software Test Intern</p>
+          <span class="cv-item-date">01.07.2025 — 10.08.2025</span>
+        </div>
+        <div class="cv-item-sub">
+          <span class="cv-item-org">Testinium</span>
+          <span class="cv-item-loc">İstanbul, Türkiye</span>
+        </div>
+        <ul class="cv-bullets">
+          <li>Built and maintained automated UI tests using <strong>Selenium (Java)</strong> in an Agile QA team; improved locator stability.</li>
+          <li>Performed functional, regression, and exploratory testing; documented bugs with clear reproduction steps.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="cv-section">
+      <h2 class="cv-section-title">Education</h2>
+      <div class="cv-item">
+        <div class="cv-item-header">
+          <p class="cv-item-title">B.Sc. Computer Engineering, <em>Boğaziçi University</em></p>
+          <span class="cv-item-date">İstanbul &nbsp;•&nbsp; Expected 2027</span>
+        </div>
+      </div>
+      <div class="cv-item">
+        <div class="cv-item-header">
+          <p class="cv-item-title">Science High School, <em>Erzurum İbrahim Hakkı Fen Lisesi</em></p>
+          <span class="cv-item-date">Avg: 96.6/100 &nbsp;•&nbsp; 2020</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECTS -->
+    <section class="cv-section">
+      <h2 class="cv-section-title">Featured Projects</h2>
+
+      <p class="cv-project">
+        <strong>Veri Fi — Fintech AI Platform</strong>: Collaborative platform classifying AI-generated financial claims.
+        Collected <strong>30M+ financial sentences</strong> via REST APIs; engineered Gemini-based prompt pipeline for financial NLP verification.
+      </p>
+
+      <p class="cv-project">
+        <strong>Credit Card Fraud Detection</strong> <a href="https://github.com/cetintiryaki/fraud-detection" target="_blank">[GitHub]</a>:
+        ML pipeline: Decision Tree + Random Forest with SMOTE on imbalanced data; ROC-AUC 1.00; confusion matrix, ROC/PR curves, feature importance.
+      </p>
+
+      <p class="cv-project">
+        <strong>NL2SQL — Natural Language to SQLite</strong> <a href="https://github.com/cetintiryaki/nl2sql" target="_blank">[GitHub]</a>:
+        English-to-SQL via Ollama/llama3 with safety layer: keyword blacklist, table whitelist, read-only mode, auto-LIMIT, audit logging.
+      </p>
+
+      <p class="cv-project">
+        <strong>Reliable UDP Transport Protocol</strong> <a href="https://github.com/cetintiryaki/reliable-udp" target="_blank">[GitHub]</a>:
+        TCP-like protocol over UDP: SEQ/ACK sliding window, RWND flow control, Slow Start/CA/Fast Recovery; supports file, media transfer, and terminal chat.
+      </p>
+
+      <p class="cv-project">
+        <strong>TransferDB — CMPE 321 Database Engineering</strong>:
+        MySQL schema (12 tables, 13 SIGNAL-firing triggers) for sport club management; Flask backend with bcrypt auth and scheduled conflict detection.
+      </p>
+
+      <p class="cv-project">
+        <strong>WitcherTracker — Systems Programming</strong>:
+        Command-driven system in C (parser/processor/writer layers) then fully ported to <strong>x86-64 GNU as Assembly</strong>; demonstrates low-level memory and I/O mastery.
+      </p>
+
+      <p class="cv-project">
+        <strong>AI Tic-Tac-Toe Agent <em>(Coursework)</em></strong>:
+        Minimax with alpha-beta pruning for optimal play; analyzed tree depth vs. performance trade-offs.
+      </p>
+    </section>
+
+    <!-- ADDITIONAL PROJECTS -->
+    <section class="cv-section">
+      <h2 class="cv-section-title">Additional Projects</h2>
+
+      <p class="cv-add-item">
+        <strong>Algorithms &amp; Data Structures:</strong>
+        Ant Colony Optimization (delivery routing); Dijkstra / Magical Map (graph pathfinding); Instagram Feed Algorithm (heap + hashmap);
+        Truck Park Simulation (AVL tree + hashmap); Decision Tree (from scratch, no libraries).
+      </p>
+
+      <p class="cv-add-item">
+        <strong>Systems &amp; Architecture:</strong>
+        Parallel Programming &amp; algorithm analysis (MPI, pthreads); OS/Kernel module (daemon, echo via kernel); RISC-V memory, cache &amp; security
+        (computer architecture); Verilog HDL &amp; Arduino embedded programming.
+      </p>
+
+      <p class="cv-add-item">
+        <strong>Simulation &amp; AI:</strong>
+        Evochirp (x86 evolutionary terminal simulation); Music Recommendation System (probabilistic simulation); Generative Art (algorithmic creative coding);
+        Interstellar Object Simulation (Perlin noise, physics); 2D Projectile Game; Prolog Farm Simulation.
+      </p>
+
+      <p class="cv-add-item">
+        <strong>Java Desktop Apps:</strong> Whiteboard (drawing editor), Pomodoro Timer, Planner Dashboard.
+      </p>
+    </section>
+
+    <!-- HOBBIES -->
+    <section class="cv-section">
+      <h2 class="cv-section-title">Hobbies</h2>
+      <p style="font-size:9.5pt;">
+        Cinema, theatre acting (İstanbul Univ.–Cerrahpaşa), literature, philosophy, piano &amp; violin, strength training, swimming.
+      </p>
+    </section>
+
+  </div>
+</main>
+<!-- ================== RESUME END ================== -->
+
+<!-- FOOTER -->
+<section class="footer-gradient mt-5">
+  <div class="container">
+    <footer class="py-4">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item"><a href="index.html" class="nav-link px-2">Home</a></li>
+        <li class="nav-item"><a href="https://github.com/cetintiryaki" target="_blank" class="nav-link px-2">GitHub</a></li>
+        <li class="nav-item"><a href="https://www.linkedin.com/in/çetin-tiryaki" target="_blank" class="nav-link px-2">LinkedIn</a></li>
+        <li class="nav-item"><a href="mailto:cetin.tiryaki@std.bogazici.edu.tr" class="nav-link px-2">Contact</a></li>
+      </ul>
+      <p class="text-center mb-0">© 2025 Çetin Tiryaki &nbsp;·&nbsp; Boğaziçi University Computer Engineering</p>
+    </footer>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
