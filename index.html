@@ -9,7 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
 </head>
 <body>
-
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container px-3">
@@ -71,19 +70,21 @@
   <div class="album py-5 bg-body-tertiary">
     <div class="container">
 
-      <div id="cardCarousel" class="carousel carousel-dark slide" data-bs-ride="false">
+      <!-- ============================== -->
+      <!-- DESKTOP / TABLET: 3 slide x 3 kart -->
+      <!-- ============================== -->
+      <div id="cardCarousel" class="carousel carousel-dark slide d-none d-md-block" data-bs-ride="false">
         <div class="carousel-inner">
 
           <!-- SLIDE 1: Fintech & AI -->
           <div class="carousel-item active">
             <div class="row g-4">
-
               <div class="col-md-4">
                 <div class="card shadow-sm">
-                  <img src="./AI.jpeg" alt="Veri-Fi" style="border-radius:12px;object-fit:cover;" width="265" height="150">
+                  <img src="./AI.jpeg" alt="Veri-Fi">
                   <div class="card-body">
                     <h5 class="card-title">Veri-Fi — Fintech AI Platform</h5>
-                    <p class="card-text">
+                    <div class="card-text">
                       <strong>About:</strong><br>
                       Collaborative platform that classifies AI-generated financial claims and tracks prediction accuracy.
                       <ul>
@@ -91,20 +92,19 @@
                         <li>Designed Gemini-based prompt engineering pipeline</li>
                         <li>Financial NLP verification at scale</li>
                       </ul>
-                    </p>
+                    </div>
                     <div class="d-flex justify-content-between align-items-center">
                       <span class="badge bg-secondary">Private — Graduation Project</span>
                     </div>
                   </div>
                 </div>
               </div>
-
               <div class="col-md-4">
                 <div class="card shadow-sm">
-                  <img src="./monte carlo.jpeg" alt="Fraud Detection" style="border-radius:12px;object-fit:cover;" width="265" height="150">
+                  <img src="./monte carlo.jpeg" alt="Fraud Detection">
                   <div class="card-body">
                     <h5 class="card-title">Credit Card Fraud Detection</h5>
-                    <p class="card-text">
+                    <div class="card-text">
                       <strong>About:</strong><br>
                       Full ML pipeline on imbalanced financial data.
                       <ul>
@@ -112,7 +112,7 @@
                         <li>ROC-AUC 1.00; confusion matrix, PR curves</li>
                         <li>Feature importance visualization</li>
                       </ul>
-                    </p>
+                    </div>
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
                         <a href="https://github.com/cetintiryaki/fraud-detection" target="_blank" class="btn btn-sm btn-outline-primary">GitHub</a>
@@ -121,13 +121,12 @@
                   </div>
                 </div>
               </div>
-
               <div class="col-md-4">
                 <div class="card shadow-sm">
-                  <img src="./cs.jpg" alt="NL2SQL" style="border-radius:12px;object-fit:cover;" width="265" height="150">
+                  <img src="./cs.jpg" alt="NL2SQL">
                   <div class="card-body">
                     <h5 class="card-title">NL2SQL — Natural Language to SQL</h5>
-                    <p class="card-text">
+                    <div class="card-text">
                       <strong>About:</strong><br>
                       Converts English commands into SQL queries using a local LLM with a full safety layer.
                       <ul>
@@ -135,7 +134,7 @@
                         <li>Keyword blacklist, table whitelist, read-only mode</li>
                         <li>Auto-LIMIT injection &amp; audit logging</li>
                       </ul>
-                    </p>
+                    </div>
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
                         <a href="https://github.com/cetintiryaki/nl2sql" target="_blank" class="btn btn-sm btn-outline-primary">GitHub</a>
@@ -144,20 +143,18 @@
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
 
           <!-- SLIDE 2: Systems & Networking -->
           <div class="carousel-item">
             <div class="row g-4">
-
               <div class="col-md-4">
                 <div class="card shadow-sm">
-                  <img src="./network.jpeg" alt="Reliable UDP" style="border-radius:12px;object-fit:cover;" width="265" height="150">
+                  <img src="./network.jpeg" alt="Reliable UDP">
                   <div class="card-body">
                     <h5 class="card-title">Reliable UDP Transport Protocol</h5>
-                    <p class="card-text">
+                    <div class="card-text">
                       <strong>About:</strong><br>
                       TCP-like reliability built on top of UDP from scratch.
                       <ul>
@@ -165,7 +162,7 @@
                         <li>Slow Start / Congestion Avoidance / Fast Recovery</li>
                         <li>File &amp; media transfer + terminal chat demo</li>
                       </ul>
-                    </p>
+                    </div>
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
                         <a href="https://github.com/cetintiryaki/reliable-udp" target="_blank" class="btn btn-sm btn-outline-primary">GitHub</a>
@@ -174,13 +171,12 @@
                   </div>
                 </div>
               </div>
-
               <div class="col-md-4">
                 <div class="card shadow-sm">
-                  <img src="./FullStack.jpg" alt="TransferDB" style="border-radius:12px;object-fit:cover;" width="265" height="150">
+                  <img src="./FullStack.jpg" alt="TransferDB">
                   <div class="card-body">
                     <h5 class="card-title">TransferDB — Database Engineering</h5>
-                    <p class="card-text">
+                    <div class="card-text">
                       <strong>About:</strong><br>
                       Full relational DB for a sports club management system (CMPE 321).
                       <ul>
@@ -188,20 +184,19 @@
                         <li>13 SIGNAL-firing triggers for integrity enforcement</li>
                         <li>Flask backend with bcrypt authentication</li>
                       </ul>
-                    </p>
+                    </div>
                     <div class="d-flex justify-content-between align-items-center">
                       <span class="badge bg-secondary">Coursework — CMPE 321</span>
                     </div>
                   </div>
                 </div>
               </div>
-
               <div class="col-md-4">
                 <div class="card shadow-sm">
-                  <img src="./skills.png" alt="WitcherTracker" style="border-radius:12px;object-fit:cover;" width="265" height="150">
+                  <img src="./skills.png" alt="WitcherTracker">
                   <div class="card-body">
                     <h5 class="card-title">WitcherTracker — Systems Programming</h5>
-                    <p class="card-text">
+                    <div class="card-text">
                       <strong>About:</strong><br>
                       Command-driven terminal application at the lowest level.
                       <ul>
@@ -209,49 +204,46 @@
                         <li>Complete port to <strong>x86-64 GNU Assembler</strong></li>
                         <li>Also includes RISC-V memory &amp; cache coursework</li>
                       </ul>
-                    </p>
+                    </div>
                     <div class="d-flex justify-content-between align-items-center">
                       <span class="badge bg-secondary">Coursework — Systems / Architecture</span>
                     </div>
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
 
           <!-- SLIDE 3: Algorithms & Academic -->
           <div class="carousel-item">
             <div class="row g-4">
-
               <div class="col-md-4">
                 <div class="card shadow-sm">
-                  <img src="./perlin.PNG" alt="Generative Art" style="border-radius:12px;object-fit:cover;" width="265" height="150">
+                  <img src="./perlin.PNG" alt="Generative Art">
                   <div class="card-body">
                     <h5 class="card-title">Generative Art &amp; Simulations</h5>
-                    <p class="card-text">
+                    <div class="card-text">
                       <strong>About:</strong><br>
                       Creative coding and physics-based simulation.
                       <ul>
-                        <li>Generative art — exhibited at Boğaziçi University(The picture above is mine.)</li>
+                        <li>Generative art — exhibited at Boğaziçi University (the picture above is mine)</li>
                         <li>Interstellar object simulation with Perlin noise</li>
                         <li>Music recommendation (probabilistic simulation)</li>
                         <li>2D projectile game; Monte Carlo methods</li>
                       </ul>
-                    </p>
+                    </div>
                     <div class="d-flex justify-content-between align-items-center">
                       <span class="badge bg-secondary">Personal &amp; Coursework</span>
                     </div>
                   </div>
                 </div>
               </div>
-
               <div class="col-md-4">
                 <div class="card shadow-sm">
-                  <img src="./software-testing.webp" alt="Algorithms" style="border-radius:12px;object-fit:cover;" width="265" height="150">
+                  <img src="./software-testing.webp" alt="Algorithms">
                   <div class="card-body">
                     <h5 class="card-title">Algorithms &amp; AI Projects</h5>
-                    <p class="card-text">
+                    <div class="card-text">
                       <strong>About:</strong><br>
                       Data structures and AI coursework implemented from scratch.
                       <ul>
@@ -261,20 +253,19 @@
                         <li>Truck park simulation (AVL tree); Dijkstra / graph projects</li>
                         <li>Decision Tree from scratch; Evochirp (x86 evolutionary simulation)</li>
                       </ul>
-                    </p>
+                    </div>
                     <div class="d-flex justify-content-between align-items-center">
                       <span class="badge bg-secondary">Coursework</span>
                     </div>
                   </div>
                 </div>
               </div>
-
               <div class="col-md-4">
                 <div class="card shadow-sm">
-                  <img src="./hobbies.jpg" alt="Hobbies" style="border-radius:12px;object-fit:cover;" width="265" height="150">
+                  <img src="./hobbies.jpg" alt="Hobbies">
                   <div class="card-body">
                     <h5 class="card-title">Beyond the Code</h5>
-                    <p class="card-text">
+                    <div class="card-text">
                       <strong>Activities:</strong>
                       <ul>
                         <li>Theatre acting — İstanbul University Cerrahpaşa Theatre Club; national tours</li>
@@ -282,14 +273,13 @@
                         <li>Strength training &amp; swimming</li>
                         <li>Cinema, literature, philosophy, psychology</li>
                       </ul>
-                    </p>
+                    </div>
                     <div class="d-flex justify-content-between align-items-center">
                       <span class="badge bg-secondary">Life outside the terminal</span>
                     </div>
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
 
@@ -304,15 +294,271 @@
           <span class="visually-hidden">Next</span>
         </button>
 
-        <br><br>
-
-        <div class="carousel-indicators mt-4">
+        <div class="carousel-indicators mt-4 position-static">
           <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Fintech & AI"></button>
           <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="1" aria-label="Systems & Networking"></button>
           <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="2" aria-label="Algorithms & Academic"></button>
         </div>
-
       </div><!-- /#cardCarousel -->
+
+
+      <!-- ================================== -->
+      <!-- MOBILE: 9 slide x 1 kart (yan kaydırma) -->
+      <!-- ================================== -->
+      <div id="cardCarouselMobile" class="carousel carousel-dark slide d-md-none" data-bs-ride="false">
+        <div class="carousel-inner">
+
+          <div class="carousel-item active">
+            <div class="row g-4">
+              <div class="col-11 col-sm-9 mx-auto">
+                <div class="card shadow-sm">
+                  <img src="./AI.jpeg" alt="Veri-Fi">
+                  <div class="card-body">
+                    <h5 class="card-title">Veri-Fi — Fintech AI Platform</h5>
+                    <div class="card-text">
+                      <strong>About:</strong><br>
+                      Collaborative platform that classifies AI-generated financial claims and tracks prediction accuracy.
+                      <ul>
+                        <li>Collected <strong>30M+ financial sentences</strong> via REST APIs</li>
+                        <li>Designed Gemini-based prompt engineering pipeline</li>
+                        <li>Financial NLP verification at scale</li>
+                      </ul>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <span class="badge bg-secondary">Private — Graduation Project</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="row g-4">
+              <div class="col-11 col-sm-9 mx-auto">
+                <div class="card shadow-sm">
+                  <img src="./monte carlo.jpeg" alt="Fraud Detection">
+                  <div class="card-body">
+                    <h5 class="card-title">Credit Card Fraud Detection</h5>
+                    <div class="card-text">
+                      <strong>About:</strong><br>
+                      Full ML pipeline on imbalanced financial data.
+                      <ul>
+                        <li>Decision Tree + Random Forest with SMOTE oversampling</li>
+                        <li>ROC-AUC 1.00; confusion matrix, PR curves</li>
+                        <li>Feature importance visualization</li>
+                      </ul>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <a href="https://github.com/cetintiryaki/fraud-detection" target="_blank" class="btn btn-sm btn-outline-primary">GitHub</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="row g-4">
+              <div class="col-11 col-sm-9 mx-auto">
+                <div class="card shadow-sm">
+                  <img src="./cs.jpg" alt="NL2SQL">
+                  <div class="card-body">
+                    <h5 class="card-title">NL2SQL — Natural Language to SQL</h5>
+                    <div class="card-text">
+                      <strong>About:</strong><br>
+                      Converts English commands into SQL queries using a local LLM with a full safety layer.
+                      <ul>
+                        <li>Ollama / llama3 backend</li>
+                        <li>Keyword blacklist, table whitelist, read-only mode</li>
+                        <li>Auto-LIMIT injection &amp; audit logging</li>
+                      </ul>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <a href="https://github.com/cetintiryaki/nl2sql" target="_blank" class="btn btn-sm btn-outline-primary">GitHub</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="row g-4">
+              <div class="col-11 col-sm-9 mx-auto">
+                <div class="card shadow-sm">
+                  <img src="./network.jpeg" alt="Reliable UDP">
+                  <div class="card-body">
+                    <h5 class="card-title">Reliable UDP Transport Protocol</h5>
+                    <div class="card-text">
+                      <strong>About:</strong><br>
+                      TCP-like reliability built on top of UDP from scratch.
+                      <ul>
+                        <li>SEQ/ACK sliding window &amp; RWND flow control</li>
+                        <li>Slow Start / Congestion Avoidance / Fast Recovery</li>
+                        <li>File &amp; media transfer + terminal chat demo</li>
+                      </ul>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <a href="https://github.com/cetintiryaki/reliable-udp" target="_blank" class="btn btn-sm btn-outline-primary">GitHub</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="row g-4">
+              <div class="col-11 col-sm-9 mx-auto">
+                <div class="card shadow-sm">
+                  <img src="./FullStack.jpg" alt="TransferDB">
+                  <div class="card-body">
+                    <h5 class="card-title">TransferDB — Database Engineering</h5>
+                    <div class="card-text">
+                      <strong>About:</strong><br>
+                      Full relational DB for a sports club management system (CMPE 321).
+                      <ul>
+                        <li>MySQL schema with 12 tables</li>
+                        <li>13 SIGNAL-firing triggers for integrity enforcement</li>
+                        <li>Flask backend with bcrypt authentication</li>
+                      </ul>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <span class="badge bg-secondary">Coursework — CMPE 321</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="row g-4">
+              <div class="col-11 col-sm-9 mx-auto">
+                <div class="card shadow-sm">
+                  <img src="./skills.png" alt="WitcherTracker">
+                  <div class="card-body">
+                    <h5 class="card-title">WitcherTracker — Systems Programming</h5>
+                    <div class="card-text">
+                      <strong>About:</strong><br>
+                      Command-driven terminal application at the lowest level.
+                      <ul>
+                        <li>Full implementation in C (parser / processor / writer)</li>
+                        <li>Complete port to <strong>x86-64 GNU Assembler</strong></li>
+                        <li>Also includes RISC-V memory &amp; cache coursework</li>
+                      </ul>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <span class="badge bg-secondary">Coursework — Systems / Architecture</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="row g-4">
+              <div class="col-11 col-sm-9 mx-auto">
+                <div class="card shadow-sm">
+                  <img src="./perlin.PNG" alt="Generative Art">
+                  <div class="card-body">
+                    <h5 class="card-title">Generative Art &amp; Simulations</h5>
+                    <div class="card-text">
+                      <strong>About:</strong><br>
+                      Creative coding and physics-based simulation.
+                      <ul>
+                        <li>Generative art — exhibited at Boğaziçi University (the picture above is mine)</li>
+                        <li>Interstellar object simulation with Perlin noise</li>
+                        <li>Music recommendation (probabilistic simulation)</li>
+                        <li>2D projectile game; Monte Carlo methods</li>
+                      </ul>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <span class="badge bg-secondary">Personal &amp; Coursework</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="row g-4">
+              <div class="col-11 col-sm-9 mx-auto">
+                <div class="card shadow-sm">
+                  <img src="./software-testing.webp" alt="Algorithms">
+                  <div class="card-body">
+                    <h5 class="card-title">Algorithms &amp; AI Projects</h5>
+                    <div class="card-text">
+                      <strong>About:</strong><br>
+                      Data structures and AI coursework implemented from scratch.
+                      <ul>
+                        <li>AI Tic-Tac-Toe agent (minimax + alpha-beta pruning)</li>
+                        <li>Ant Colony Optimization — supermarket delivery routing</li>
+                        <li>Instagram feed ranking (heap + hashmap)</li>
+                        <li>Truck park simulation (AVL tree); Dijkstra / graph projects</li>
+                        <li>Decision Tree from scratch; Evochirp (x86 evolutionary simulation)</li>
+                      </ul>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <span class="badge bg-secondary">Coursework</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="row g-4">
+              <div class="col-11 col-sm-9 mx-auto">
+                <div class="card shadow-sm">
+                  <img src="./hobbies.jpg" alt="Hobbies">
+                  <div class="card-body">
+                    <h5 class="card-title">Beyond the Code</h5>
+                    <div class="card-text">
+                      <strong>Activities:</strong>
+                      <ul>
+                        <li>Theatre acting — İstanbul University Cerrahpaşa Theatre Club; national tours</li>
+                        <li>Piano &amp; violin</li>
+                        <li>Strength training &amp; swimming</li>
+                        <li>Cinema, literature, philosophy, psychology</li>
+                      </ul>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <span class="badge bg-secondary">Life outside the terminal</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /.carousel-inner mobile -->
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#cardCarouselMobile" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#cardCarouselMobile" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+
+        <div class="carousel-indicators mt-4 position-static">
+          <button type="button" data-bs-target="#cardCarouselMobile" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Card 1"></button>
+          <button type="button" data-bs-target="#cardCarouselMobile" data-bs-slide-to="1" aria-label="Card 2"></button>
+          <button type="button" data-bs-target="#cardCarouselMobile" data-bs-slide-to="2" aria-label="Card 3"></button>
+          <button type="button" data-bs-target="#cardCarouselMobile" data-bs-slide-to="3" aria-label="Card 4"></button>
+          <button type="button" data-bs-target="#cardCarouselMobile" data-bs-slide-to="4" aria-label="Card 5"></button>
+          <button type="button" data-bs-target="#cardCarouselMobile" data-bs-slide-to="5" aria-label="Card 6"></button>
+          <button type="button" data-bs-target="#cardCarouselMobile" data-bs-slide-to="6" aria-label="Card 7"></button>
+          <button type="button" data-bs-target="#cardCarouselMobile" data-bs-slide-to="7" aria-label="Card 8"></button>
+          <button type="button" data-bs-target="#cardCarouselMobile" data-bs-slide-to="8" aria-label="Card 9"></button>
+        </div>
+      </div><!-- /#cardCarouselMobile -->
 
     </div>
   </div>
@@ -331,9 +577,8 @@
       </footer>
     </div>
   </section>
-
 </main>
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
+
