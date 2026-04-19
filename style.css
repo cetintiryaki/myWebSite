@@ -4,55 +4,115 @@
   animation: gradientMove 30s ease infinite;
   color: #fff;
 }
-
 @keyframes gradientMove {
   0% {background-position: 0% 50%;}
   50% {background-position: 100% 50%;}
   100% {background-position: 0% 50%;}
 }
-
 .hero-section h1 {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 600; /* kalınlık */
-  letter-spacing: 1px; /* harfler arası biraz açıklık */
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 
 /* Carousel butonları daha görünür olsun */
 #cardCarousel .carousel-control-prev,
-#cardCarousel .carousel-control-next {
+#cardCarousel .carousel-control-next,
+#cardCarouselMobile .carousel-control-prev,
+#cardCarouselMobile .carousel-control-next {
   width: 4rem;
 }
-
 #cardCarousel .carousel-control-prev-icon,
-#cardCarousel .carousel-control-next-icon {
+#cardCarousel .carousel-control-next-icon,
+#cardCarouselMobile .carousel-control-prev-icon,
+#cardCarouselMobile .carousel-control-next-icon {
   filter: drop-shadow(0 0 4px rgba(0,0,0,.5));
 }
 
 /* Kartlar arası standart gutter */
-#cardCarousel .row > [class^="col"] {
+#cardCarousel .row > [class^="col"],
+#cardCarouselMobile .row > [class^="col"] {
   padding-left: .75rem;
   padding-right: .75rem;
+  display: flex;          /* kart kolonu doldursun */
 }
 
+/* KART: tüm kartlar eşit yükseklikte olsun */
 .card {
   border: none;
-  border-radius: 8px;              
-  width: 75%;                      
-  margin: 0 auto;                  
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;           /* kolon yüksekliğini doldur */
+  display: flex;
+  flex-direction: column;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .card:hover {
   transform: translateY(-6px);
   box-shadow: 0 8px 16px rgba(0,0,0,0.15);
 }
 
+/* Görseller eşit yükseklikte */
+.card > img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+/* Kart içi flex: alt kısım aşağı itilebilsin */
 .card-body {
-  padding: 1.25rem;                 /* içerik biraz sıkı dursun */
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+
+/* Kart içi ul, text, badge hizalaması */
+.card-body .card-text {
+  flex: 1 1 auto;
+}
+.card-body ul {
+  padding-left: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+.card-body .d-flex.justify-content-between {
+  margin-top: auto;       /* badge/button her kartta aynı hizada kalsın */
 }
 
 .card-border-top {
-  border-top: 4px solid;  /* daha ince şerit */
+  border-top: 4px solid;
+}
+
+/* Footer zıplamasını önle: carousel-inner'a min-height ver */
+@media (min-width: 768px) {
+  #cardCarousel .carousel-inner {
+    min-height: 620px;
+  }
+}
+@media (max-width: 767.98px) {
+  #cardCarouselMobile .carousel-inner {
+    min-height: 560px;
+  }
+}
+
+/* Mobil carousel: tek kart ortalansın, taşmasın */
+#cardCarouselMobile .carousel-item .row {
+  justify-content: center;
+}
+#cardCarouselMobile .carousel-control-prev,
+#cardCarouselMobile .carousel-control-next {
+  width: 3rem;
+}
+
+/* Mobilde indicator çok olmasın diye küçültelim */
+#cardCarouselMobile .carousel-indicators [data-bs-target] {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-left: 4px;
+  margin-right: 4px;
 }
 
 .footer-gradient{
@@ -60,18 +120,15 @@
   background-size: 800% 800%;
   animation: gradientMove 30s ease infinite;
   color: #fff;
-  padding: 48px 0 24px;     /* gradient alanını görünür kılar */
+  padding: 48px 0 24px;
 }
-
 .footer-gradient .nav-link,
 .footer-gradient p {
   color: #fff !important;
 }
-
 .footer-gradient .border-bottom{
   border-color: rgba(255,255,255,.25) !important;
 }
-
 
 
 
